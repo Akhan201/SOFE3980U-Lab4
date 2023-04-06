@@ -79,4 +79,66 @@ public class Binary
 		return result;
 		
 	}
+	 // Design Question 1: Add three functions to the Binary class
+    //OR: bitwise logical OR
+    public static Binary OR(Binary num1,Binary num2){
+        //Convert Binary Objects values to int
+        String num1S=String.valueOf(num1.number);
+        String num2S=String.valueOf(num2.number);
+        int num1D= Integer.parseInt(num1S,2);
+        int num2D= Integer.parseInt(num2S,2);
+
+        //Bitwise Or the Values:
+        int res=0;
+        res= num1D | num2D;
+
+        //Convert Values back to String
+        String value = Integer.toBinaryString(res);
+
+        //Create new object with the value of the result
+        Binary num3 =new Binary(value);
+
+        return num3;
+    }
+    //AND: Bitwise Logical AND
+    public static Binary AND(Binary num1,Binary num2){
+        //Convert Binary Objects values to int
+        String num1S=String.valueOf(num1.number);
+        String num2S=String.valueOf(num2.number);
+        int num1D= Integer.parseInt(num1S,2);
+        int num2D= Integer.parseInt(num2S,2);
+
+        //Bitwise AND the Values:
+        int res=0;
+        res= num1D & num2D;
+
+        //Convert Values back to String
+        String value = Integer.toBinaryString(res);
+
+        //Create new object with the value of the result
+        Binary num3 =new Binary(value);
+
+        return num3;
+    }
+    //MUL: Multiply
+    public static Binary MUL(Binary num1,Binary num2){
+       //Convert Binary Objects values to int
+       String num1S=String.valueOf(num1.number);
+       String num2S=String.valueOf(num2.number);
+       int num1D= Integer.parseInt(num1S,2);
+       int num2D= Integer.parseInt(num2S,2);
+
+       //Multiply the Values:
+       int res=0;
+       res= num1D * num2D;
+
+       //Convert Values back to String
+       String value = Integer.toBinaryString(res);
+
+       //Create new object with the value of the result
+       Binary num3 =new Binary(value);
+
+       return num3;
+
+    }
 }	
